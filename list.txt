@@ -1,0 +1,4 @@
+Tavaline haldjarüü;50
+Võlupüksid;100
+Välguvastane pross;250
+Võlukeep;1000
