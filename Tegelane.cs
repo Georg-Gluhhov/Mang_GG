@@ -43,6 +43,10 @@ namespace Mang_GG
         {
             throw new NotImplementedException();
         }
+        public void Equip(Ese item) 
+        { 
+            eseList.Add(item);
+        }
 
         public int CompareTo(Tegelane? other)
         {
