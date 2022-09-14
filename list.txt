@@ -1,4 +1,19 @@
-Tavaline haldjarüü;50
-Võlupüksid;100
-Välguvastane pross;250
-Võlukeep;1000
+Standard Fairy Armor; 50
+Magic pants; 100
+Trophy against lightning; 250
+a wand; 1000
+Ring of Great Power; 750
+waist bag; 150
+A large magic bag; 800
+Boots of Speed; 500
+Wallet; 750
+Very High Agility Ring; 900
+Small iron magic shield; 100
+Heavy Cursed Gloves; 250
+Regular Axis; 50
+A potion of fatigue; 350
+Potion of Wisdom; 300
+Potion of Healing Minor Wounds; 200
+Very High Agility Gloves; 600
+Cold prevention; 400
+Fire fighting decorations; 650

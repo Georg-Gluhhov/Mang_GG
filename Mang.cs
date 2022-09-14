@@ -8,11 +8,40 @@ namespace Mang_GG
 {
     internal class Mang
     {
-        Tegelane[] mangija;
+        Tegelane[] players;
 
-        public Mang(Tegelane[] mangija)
+        public Mang(Tegelane[] players)
         {
-            this.mangija = mangija;
+            this.players = players;
+        }
+
+        public List<Tegelane> SuurimaEsemeteArvuga()
+        {
+            List<Tegelane> winners = new List<Tegelane>();
+            Tegelane comparable = players[0];
+            foreach (Tegelane plr in players)
+            {
+                int num = comparable.CompareTo(plr);
+                if (num < 0)
+                {
+                    comparable = plr;
+                    winners.Clear();
+                }
+                if (num == 0) winners.Add(plr);
+            }
+            winners.Add(comparable);
+            return winners;
+        }
+        public Tegelane SuurimaPunktideArvuga()
+        {
+            int highest = 0;
+            Tegelane winner = players[0];
+            foreach (Tegelane plr in players)
+            {
+                int arv = plr.punktideArv();
+                if (arv > highest) { highest = arv; winner = plr; }
+            }
+            return winner;
         }
     }
 }

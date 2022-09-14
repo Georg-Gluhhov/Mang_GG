@@ -41,7 +41,9 @@ namespace Mang_GG
 
         public int punktideArv()
         {
-            throw new NotImplementedException();
+            int sum = 0;
+            foreach (Ese item in eseList) { sum += item.punktideArv(); }
+            return sum;
         }
         public void Equip(Ese item) 
         { 
@@ -50,7 +52,8 @@ namespace Mang_GG
 
         public int CompareTo(Tegelane? other)
         {
-            throw new NotImplementedException();
+            if (other == null) return 1;
+            return this.eseList.Count - other.eseList.Count();
         }
     }
 }

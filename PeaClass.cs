@@ -25,7 +25,7 @@ namespace Mang_GG
         {
             string[] symbl = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "l", "k"};
             string name = "";
-            while (name.Length != rng.Next(3, 12))
+            while (name.Length < rng.Next(3, 12))
             {
                 name += symbl[rng.Next(symbl.Length)];
             }
@@ -57,6 +57,7 @@ namespace Mang_GG
             if (itemList.Count <= 0) throw new Exception();
             foreach (Tegelane plr in plrs)
             {
+                if(plr==null) continue;
                 int amount = rng.Next(2, 10);
                 for (int i = 0; i < amount; i++)
                 {
@@ -65,6 +66,18 @@ namespace Mang_GG
             }
             return plrs;
         }
+        public static void PlayGame(int plrCount)
+        {
 
+            Tegelane[] plrs = populatePlayers(plrCount);
+            Console.Write("2");
+            Mang mang = new Mang(plrs);
+            foreach (Tegelane winner in mang.SuurimaEsemeteArvuga())
+            {
+                Console.WriteLine(winner.info());
+            }
+            Tegelane win = mang.SuurimaPunktideArvuga();
+            Console.WriteLine(win.info());
+        }
     }
 }
